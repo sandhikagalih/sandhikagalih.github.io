@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+      integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+      crossorigin="anonymous"
+    />
 
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -63,15 +78,15 @@
     <section id="about">
       <div class="container">
         <div class="row text-center mb-3">
-          <div class="col">
+          <div class="col" data-aos="fade-down">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure mollitia voluptatum corrupti sint delectus facilis pariatur recusandae! Eveniet, iure debitis?</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quibusdam animi odit unde sequi voluptatibus quo rem perferendis eos, numquam in porro cumque a hic!</p>
           </div>
         </div>
@@ -95,7 +110,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-right">
             <div class="card">
               <img src="img/projects/1.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
@@ -103,7 +118,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-right" data-aos-delay="500">
             <div class="card">
               <img src="img/projects/2.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body">
@@ -111,7 +126,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-right" data-aos-delay="1000">
             <div class="card">
               <img src="img/projects/3.jpg" class="card-img-top" alt="Project 3" />
               <div class="card-body">
@@ -119,7 +134,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-right" data-aos-delay="500">
             <div class="card">
               <img src="img/projects/4.jpg" class="card-img-top" alt="Project 4" />
               <div class="card-body">
@@ -127,7 +142,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-right" data-aos-delay="1000">
             <div class="card">
               <img src="img/projects/5.jpg" class="card-img-top" alt="Project 5" />
               <div class="card-body">
@@ -201,7 +216,49 @@
     </footer>
     <!-- Akhir Footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+
+    <script>
+      gsap.from('.img-thumbnail', { duration: 2, rotationX: 360 });
+      gsap.from('.navbar', { duration: 1.5, opacity: 0, y: '-100%', ease: 'bounce' });
+      gsap.from('.display-4', { delay: 1, duration: 1, opacity: 0, x: '-10%' });
+
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', { delay: 1.5, duration: 2, text: 'Lecturer | Content Creator' });
+
+      const galleryImages = document.querySelectorAll('.gallery-img');
+      const delayTimes = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450];
+
+      function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var temp = array[i];
+          array[i] = array[j];
+          array[j] = temp;
+        }
+        return array;
+      }
+      const newDelay = shuffleArray(delayTimes);
+      galleryImages.forEach((img, i) => {
+        img.dataset.aos = 'fade-up';
+        img.dataset.aosDelay = i * 50 + '';
+        // img.dataset.aosDelay = newDelay[i];
+      });
+
+      AOS.init({
+        once: true,
+        duration: 3000,
+      });
+    </script>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbzjWwvjJihKz3-24SxEnHM5XFjNPgQd_dv3uD_fgjLSp_4AAXsC6IC4C_ECvWyLkGsuBg/exec';
