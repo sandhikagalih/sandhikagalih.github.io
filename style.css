@@ -21,7 +21,7 @@ section {
 }
 
 .keyboard-box::before {
-  content: 'MY';
+  content: "MY";
   position: absolute;
   color: #fff;
   font-size: 6em;
@@ -39,7 +39,7 @@ section {
 }
 
 .keyboard-box::after {
-  content: 'KEYBOARD';
+  content: "KEYBOARD";
   position: absolute;
   color: #fff;
   font-size: 4.3em;
@@ -100,4 +100,26 @@ section {
 
 .keyboard-box:hover .keyboard-img {
   transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+footer .socials a:hover,
+footer .links a:hover {
+  transition: 0.5s;
+  color: var(--bg);
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
 }
