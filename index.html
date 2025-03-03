@@ -6,12 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
@@ -84,7 +79,7 @@
         </div>
         <div class="row justify-content-center fs-5 text-center">
           <div class="col-md-4" data-aos="fade-right">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure mollitia voluptatum corrupti sint delectus facilis pariatur recusandae! Eveniet, iure debitis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti quos harum veniam ut aperiam consequuntur in a. Id, saepe laudantium ut neque voluptas, sit nobis enim aliquid consequuntur aspernatur est?</p>
           </div>
           <div class="col-md-4" data-aos="fade-left">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quibusdam animi odit unde sequi voluptatibus quo rem perferendis eos, numquam in porro cumque a hic!</p>
@@ -249,11 +244,7 @@
     </footer>
     <!-- Akhir Footer -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -261,14 +252,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
 
     <script>
-      gsap.from('.img-thumbnail', { duration: 2, rotationX: 360 });
-      gsap.from('.navbar', { duration: 1.5, opacity: 0, y: '-100%', ease: 'bounce' });
-      gsap.from('.display-4', { delay: 1, duration: 1, opacity: 0, x: '-10%' });
+      gsap.from(".img-thumbnail", { duration: 2, rotationX: 360 });
+      gsap.from(".navbar", { duration: 1.5, opacity: 0, y: "-100%", ease: "bounce" });
+      gsap.from(".display-4", { delay: 1, duration: 1, opacity: 0, x: "-10%" });
 
       gsap.registerPlugin(TextPlugin);
-      gsap.to('.lead', { delay: 1.5, duration: 2, text: 'Lecturer | Content Creator' });
+      gsap.to(".lead", { delay: 1.5, duration: 2, text: "Lecturer | Content Creator" });
 
-      const galleryImages = document.querySelectorAll('.gallery-img');
+      const galleryImages = document.querySelectorAll(".gallery-img");
       const delayTimes = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450];
 
       function shuffleArray(array) {
@@ -282,8 +273,8 @@
       }
       const newDelay = shuffleArray(delayTimes);
       galleryImages.forEach((img, i) => {
-        img.dataset.aos = 'fade-up';
-        img.dataset.aosDelay = i * 50 + '';
+        img.dataset.aos = "fade-up";
+        img.dataset.aosDelay = i * 50 + "";
         // img.dataset.aosDelay = newDelay[i];
       });
 
@@ -294,36 +285,36 @@
     </script>
 
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzjWwvjJihKz3-24SxEnHM5XFjNPgQd_dv3uD_fgjLSp_4AAXsC6IC4C_ECvWyLkGsuBg/exec';
-      const form = document.forms['wpu-contact-form'];
-      const btnKirim = document.querySelector('.btn-kirim');
-      const btnLoading = document.querySelector('.btn-loading');
-      const myAlert = document.querySelector('.my-alert');
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzjWwvjJihKz3-24SxEnHM5XFjNPgQd_dv3uD_fgjLSp_4AAXsC6IC4C_ECvWyLkGsuBg/exec";
+      const form = document.forms["wpu-contact-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
 
-      form.addEventListener('submit', (e) => {
+      form.addEventListener("submit", (e) => {
         e.preventDefault();
         // ketika tombol submit diklik
         // tampilkan tombol loading, hilangkan tombol kirim
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
             // tampilkan tombol kirim, hilangkan tombol loading
-            btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
             // tampilkan alert
-            myAlert.classList.toggle('d-none');
+            myAlert.classList.toggle("d-none");
             // reset formnya
             form.reset();
-            console.log('Success!', response);
+            console.log("Success!", response);
           })
-          .catch((error) => console.error('Error!', error.message));
+          .catch((error) => console.error("Error!", error.message));
       });
     </script>
 
     <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
     <script type="text/javascript">
-      VanillaTilt.init(document.querySelectorAll('.keyboard-box'), {
+      VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
         max: 35,
         speed: 1000,
         glare: true,
